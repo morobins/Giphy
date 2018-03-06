@@ -52,9 +52,12 @@ $.ajax({
 for (var j = 0; j < topics.length; j++) {
   // Obtain a reference to the tbody element in the DOM
   var gifDiv = $("#gif-holder");
-  var artistDiv = $("<div>")
-  artistDiv.append("<img src" + response.data[j].images.fixed_height.url + ">")
+  var artistDiv = $("<div>");
+  var artistImg = $("<img>")
+  artistImg.attr("src", response.data[j].images.fixed_height.url);
+  artistImg.attr("alt", response.data[j].title);
   artistDiv.append("<p> Rating: " + response.data[j].rating + "</p>");
+  artistDiv.append(artistImg);
   gifDiv.prepend(artistDiv);
 
 }
