@@ -50,12 +50,15 @@ $.ajax({
 }).then(function(response) {
   console.log(response);
 for (var j = 0; j < topics.length; j++) {
-  // Obtain a reference to the tbody element in the DOM
   var gifDiv = $("#gif-holder");
   var artistDiv = $("<div>");
   var artistImg = $("<img>")
-  artistImg.attr("src", response.data[j].images.fixed_height.url);
+  artistImg.attr("src", response.data[j].images.fixed_height_still.url);
   artistImg.attr("alt", response.data[j].title);
+  artistImg.attr("data-still", response.data[j].images.fixed_height_still.url);
+  artistImg.attr("data-animate", response.data[j].images.fixed_height.url);
+  artistImg.attr("data-state", "still");
+  artistImg.addClass("gif");
   artistDiv.append("<p> Rating: " + response.data[j].rating + "</p>");
   artistDiv.append(artistImg);
   gifDiv.prepend(artistDiv);
@@ -66,6 +69,21 @@ for (var j = 0; j < topics.length; j++) {
 
 });
 
+$(".gif").on("click", function() {
+ 
+ var state = $(this).attr('data-state');
+
+  if (state === 'still') {
+    $(this).attr("src", $(this).attr('data-animate'));
+    $(this).attr("data-state", "animate");
+  } 
+  
+  if (state === 'animate') {
+    $(this).attr("src", $(this).attr('data-still'));
+    $(this).attr("data-state", "still");
+  }
+
+});
 
 
 });
