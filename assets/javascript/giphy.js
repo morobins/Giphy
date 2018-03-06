@@ -69,7 +69,7 @@ for (var j = 0; j < topics.length; j++) {
 
 });
 
-$(".gif").on("click", function() {
+$(document).on("click", ".gif", function() {
  
  var state = $(this).attr('data-state');
 
