@@ -7,8 +7,6 @@ var topics = ["Bruno Mars", "Beyonce", "Alicia Keys", "Cardi B", "Drake", "Micha
 console.log(topics);
 
 
-// Your app should take the topics in this array and create buttons in your HTML.
-
 function renderButtons() {
 
   // Deleting the artists prior to adding new artists
@@ -20,7 +18,7 @@ function renderButtons() {
     // Then dynamicaly generating buttons for each artist in the array
     var a = $("<button>");
     // Adding a class
-    a.addClass("artist");
+    a.addClass("artist snip0059");
     // Added a data-attribute
     a.attr("data-name", topics[i]);
     // Provided the initial button text
@@ -37,16 +35,14 @@ $("#add-artist").on("click", function (event) {
   // "Enter" instead of clicking the button if desired
   event.preventDefault();
 
-  // Write code to grab the text the user types into the input field
-  
- 
+  // If the box is left empty render invalid
   if ($("#artist-input").val() === '') {
 
     $("#artist-input").addClass('is-invalid');
     return false;
   }
   $("#artist-input").removeClass('is-invalid');
-
+  // Write code to grab the text the user types into the input field
   var newArtist = $("#artist-input").val();
   // Write code to add the new movie into the movies array
   topics.push(newArtist);
@@ -60,11 +56,7 @@ $("#add-artist").on("click", function (event) {
 renderButtons();
   
 
-
-
-// Try using a loop that appends a button for each string in the array.
-// When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
-
+//Make AJAX call and add the designated parameters to page
 function displayArtists() {
   var artist = $(this).attr("data-name");
 
@@ -96,7 +88,7 @@ for (var j = 0; j < topics.length; j++) {
 
 };
 
-
+//Toggles the state from still to animate
 $(document).on("click", ".gif", function() {
  
  var state = $(this).attr('data-state');
@@ -113,6 +105,7 @@ $(document).on("click", ".gif", function() {
 
 });
 
+//adds on click to all buttons with the class of artist
 $(document).on("click", '.artist', displayArtists);
 
 });
