@@ -3,7 +3,7 @@ $(document).ready(function () {
 //my giphy api key: 78pvxPWLFFAkOvLV0puu7DNzTHrsYiNm
 
 //Before you can make any part of our site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
-var topics = ["Bruno Mars", "Beyonce", "Alicia Keys", "Cardi B", "Drake", "Michael Jackson", "Mariah Carey"];
+var topics = ["Bruno Mars", "Beyonce", "Alicia Keys", "Cardi B", "Drake", "Michael Jackson", "Mariah Carey", "Tupac", "Notorious BIG", "Justin Timberlake"];
 console.log(topics);
 
 
@@ -40,15 +40,20 @@ $("#add-artist").on("click", function (event) {
   // Write code to grab the text the user types into the input field
   
  
-  if ($("#artist-input").val() !== '') {
+  if ($("#artist-input").val() === '') {
+
+    $("#artist-input").addClass('is-invalid');
+    return false;
+  }
+  $("#artist-input").removeClass('is-invalid');
 
   var newArtist = $("#artist-input").val();
   // Write code to add the new movie into the movies array
   topics.push(newArtist);
+  console.log(topics);
 
   renderButtons();
 
-  };
 
 });
 
@@ -74,7 +79,7 @@ $.ajax({
 for (var j = 0; j < topics.length; j++) {
   var gifDiv = $("#gif-holder");
   var artistDiv = $("<div>");
-  var artistImg = $("<img>")
+  var artistImg = $("<img>");
   artistImg.attr("src", response.data[j].images.fixed_height_still.url);
   artistImg.attr("alt", response.data[j].title);
   artistImg.attr("data-still", response.data[j].images.fixed_height_still.url);
