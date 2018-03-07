@@ -34,16 +34,15 @@ $("#add-artist").on("click", function (event) {
   // Using a submit button instead of a regular button allows the user to hit
   // "Enter" instead of clicking the button if desired
   event.preventDefault();
-
+  var newArtist = $("#artist-input").val().trim();
   // If the box is left empty render invalid
   if ($("#artist-input").val() === '') {
-
     $("#artist-input").addClass('is-invalid');
     return false;
   }
   $("#artist-input").removeClass('is-invalid');
   // Write code to grab the text the user types into the input field
-  var newArtist = $("#artist-input").val();
+  
   // Write code to add the new movie into the movies array
   topics.push(newArtist);
   console.log(topics);

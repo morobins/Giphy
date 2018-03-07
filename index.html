@@ -9,16 +9,22 @@
   <title>Music Artist Gifs</title>
 </head>
 <body>
-  <h1>Have Giphy Fun with Your Favorite Artists!</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Have Giphy Fun with Your Favorite Artists!</h1>
+          <p class="lead">Find the best gif from you favorite artist to describe your mood!</p>
+        </div>
+      </div>
 
   <div id="button-holder"></div>
   <form id="artist-form">
-    <label for="artist-input">Give it a try!</label>
-    <input type="text" id="artist-input">
+    <!-- <label for="artist-input">Give it a try!</label> -->
+    <input type="text" class="form-control" id="artist-input" placeholder="Give it a Try! Enter Music Artist">
+    <small class="form-text text-muted">Required</small>
     <br>
 
     <!-- Button triggers new artist to be added -->
-    <input id="add-artist" class="snip0059" type="submit" value="Go!">
+    <input id="add-artist" class="snip0050" type="submit" value="Go!"><i class="ion-checkmark"></i>
   </form>
   <div id="gif-holder"></div>
 
