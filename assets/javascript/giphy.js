@@ -65,7 +65,7 @@ renderButtons();
 // Try using a loop that appends a button for each string in the array.
 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
-$("button").on("click", function(){
+function displayArtists() {
   var artist = $(this).attr("data-name");
 
 var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=78pvxPWLFFAkOvLV0puu7DNzTHrsYiNm&q=" + artist + "&limit=10"
@@ -94,7 +94,8 @@ for (var j = 0; j < topics.length; j++) {
 
 });
 
-});
+};
+
 
 $(document).on("click", ".gif", function() {
  
@@ -112,6 +113,7 @@ $(document).on("click", ".gif", function() {
 
 });
 
+$(document).on("click", '.artist', displayArtists);
 
 });
 
