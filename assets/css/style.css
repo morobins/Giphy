@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
-
 .body {
   font-family: 'Raleway', Arial, sans-serif;
 }
@@ -25,6 +24,7 @@ button.snip0059 {
   position: relative;
   overflow: hidden;
 }
+
 button.snip0059:before {
   content: '';
   display: block;
@@ -43,12 +43,14 @@ button.snip0059:before {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
 button.snip0059:hover,
 button.snip0059.hover {
   color: #ffffff;
   -webkit-animation: flashText 0.5s;
   animation: flashText 0.5s;
 }
+
 button.snip0059:hover:before,
 button.snip0059.hover:before {
   left: 12px;
@@ -56,6 +58,7 @@ button.snip0059.hover:before {
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 0.8;
 }
+
 /* .snip0059:active:before {
   background-color: rgba(255, 255, 255, 0.3);
   opacity: 1;
@@ -74,6 +77,7 @@ button.snip0059.hover:before {
     color: #fff;
   }
 }
+
 @keyframes flashText {
   0% {
     color: rgba(255, 255, 255, 0.5);
@@ -106,6 +110,7 @@ input.snip0050 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 input.snip0050 span {
   display: inline-block;
   -webkit-transition: all 0.3s;
@@ -114,6 +119,7 @@ input.snip0050 span {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
 input.snip0050 i {
   font-size: 28px;
   text-align: center;
@@ -130,6 +136,7 @@ input.snip0050 i {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+
 input.snip0050:before {
   border-radius: 3px;
   content: '';
@@ -144,22 +151,26 @@ input.snip0050:before {
   -webkit-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }
+
 input.snip0050:hover,
 input.snip0050.hover {
   color: #000000;
 }
+
 input.snip0050:hover span,
 input.snip0050.hover span {
   opacity: 0;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+
 input.snip0050:hover i,
 input.snip0050.hover i {
   opacity: 1;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+
 input.snip0050:hover:before,
 input.snip0050.hover:before {
   left: 3px;
@@ -168,6 +179,7 @@ input.snip0050.hover:before {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+
 input.snip0050:active:before {
   background: rgba(255, 255, 255, 0.7);
 }
