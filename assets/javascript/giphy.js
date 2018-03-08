@@ -46,9 +46,10 @@ $(document).ready(function () {
     // Write code to add the new movie into the movies array
     topics.push(newArtist);
     console.log(topics);
-
+    
     renderButtons();
-
+    
+    $("#artist-input").val("");
 
   });
 
