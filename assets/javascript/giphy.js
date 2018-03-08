@@ -58,6 +58,7 @@ $(document).ready(function () {
 
   //Make AJAX call and add the designated parameters to page
   function displayArtists() {
+    $("#gif-holder").empty();
     var artist = $(this).attr("data-name");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=78pvxPWLFFAkOvLV0puu7DNzTHrsYiNm&q=" + artist + "&limit=10"
