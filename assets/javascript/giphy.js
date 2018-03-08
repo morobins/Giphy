@@ -79,9 +79,9 @@ $(document).ready(function () {
         artistImg.attr("data-animate", response.data[j].images.fixed_height.url);
         artistImg.attr("data-state", "still");
         artistImg.addClass("gif");
-        artistDiv.append("<p> Title: " + response.data[j].title + "</p>");
-        artistDiv.append("<p> Rating: " + response.data[j].rating + "</p>");
+        // artistDiv.append("<p> Title: " + response.data[j].title + "</p>");
         artistDiv.append(artistImg);
+        artistDiv.append("<p> Rating: " + response.data[j].rating + "</p>");
         gifDiv.prepend(artistDiv);
 
       }
