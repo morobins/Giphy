@@ -192,3 +192,19 @@ input.snip0050.hover:before {
 input.snip0050:active:before {
   background: rgba(255, 255, 255, 0.7);
 }
+
+@media screen and (max-width: 640px) {
+  #artist-input {
+    width: 100%;
+  }
+  
+  img {
+    /* width: 960px; */
+    /* margin-bottom: 20px; */
+  }
+  
+  .grid {
+    column-count: 1;
+  }
+
+}
