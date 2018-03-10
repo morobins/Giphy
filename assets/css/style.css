@@ -198,11 +198,6 @@ input.snip0050:active:before {
     width: 100%;
   }
   
-  img {
-    /* width: 960px; */
-    /* margin-bottom: 20px; */
-  }
-  
   .grid {
     column-count: 1;
   }
